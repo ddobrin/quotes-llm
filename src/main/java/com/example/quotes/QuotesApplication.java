@@ -39,3 +39,31 @@ public class QuotesApplication implements AppShellConfigurator {
     SpringApplication.run(QuotesApplication.class, args);
   }
 }
+#Generate new error codes  public enum ErrorCode {
+    QUOTE_NOT_FOUND(1001, "Quote not found"),
+    BOOK_NOT_FOUND(1002, "Book not found"),
+    AUTHOR_NOT_FOUND(1003, "Author not found"),
+    INVALID_INPUT(1004, "Invalid input provided"),
+    DATABASE_ERROR(1005, "Database operation failed"),
+    UNEXPECTED_ERROR(1006, "An unexpected error occurred"),
+    DUPLICATE_QUOTE(1007, "Duplicate quote found"),
+    DUPLICATE_BOOK(1008, "Duplicate book found"),
+    DUPLICATE_AUTHOR(1009, "Duplicate author found");
+
+    private final int code;
+    private final String message;
+
+    ErrorCode(int code, String message) {
+      this.code = code;
+      this.message = message;
+    }
+
+    public int getCode() {
+      return code;
+    }
+
+    public String getMessage() {
+      return message;
+    }
+  }
+  
