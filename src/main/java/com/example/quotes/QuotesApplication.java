@@ -39,3 +39,7 @@ public class QuotesApplication implements AppShellConfigurator {
     SpringApplication.run(QuotesApplication.class, args);
   }
 }
+
+
+  
+  
